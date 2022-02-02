@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <style>
+        #inner {
+            position: relative;
+            border-style: solid;
+            border-color: #73AD21;
+            border-width: 10px;
+            border-radius: 19px;
+            background: #FFFFFF;
+            padding: 8px;
+            width: 280px;
+            text-align: center;
+            font-family: "Arial", Gadget, sans-serif;
+            font-size: 10;
+
+        }
+
+        #header {
+
+            font-family: "Arial Black", Gadget, sans-serif;
+            font-size: 24;
+            border-width: 0px;
+            text-align: center;
+            margin-top: 2px;
+            margin-bottom: 4px;
+            padding: 0px;
+        }
+
+        #qrcode {
+            width: 280px;
+            height: 280px;
+            margin: auto;
+        }
+
+        #logo {
+            z-index: 10;
+            position: absolute;
+            top: 170px;
+
+            width: 70px;
+            height: 35px;
+            left: 115px;
+    </style>
+</head>
+
+<body>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"
+        integrity="sha256-25ncr0CpJhgbzkUiR3wu/Fkk9sSykRG2qX+upHfJUos=" crossorigin="anonymous">
+        </script>
+    -->
+
+    <div id=inner>
+        <div id=header>
+            Scan For Wiki Info
+        </div>
+        <div>
+            <img src="<%= qrImgData %>" id="qrcode" />
+            <img id="logo"
+                src="https://talk.vanhack.ca/uploads/default/original/1X/9f0e672ff23af79f2616d957674f07b48adfb3ee.png">
+        </div>
+        <div id=url>
+            <strong id="refurl">
+                <%= baseUrl %>/<%= page %>
+            </strong>
+        </div>
+
+
+        <!--
+        <script>
+            (function () {
+                var qr = new QRious({
+                    element: document.getElementById('qr'),
+                    value: "https://vanhack.ca/doku.php?id=tool:redsail_cm1080_laser_cutter"
+                });
+                document.getElementById("url").innerText = "https://vanhack.ca/doku.php?id=tool:redsail_cm1080_laser_cutter"
+            })();
+        </script> -->
+
+</body>
+
+</html>
